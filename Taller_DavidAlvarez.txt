@@ -1,0 +1,42 @@
+﻿		TALLER EN CLASE 22 DE OCTUBRE DEL 2019
+
+**Elabore una función lambda que filter aquellos países (countries) que empiezan por la letra C.
+
+val countries = List("Ecuador", "Venezuela", "Colombia", "Perú", "Chile", "Argentina", "Uruguay", "Paraguay", "Brasil")
+
+val letraC =(x:String) => x.contains("C")
+
+countries.filter(letraC)
+
+List[String]= List(colombia,Chile)
+
+**Elabore una función lambda que filter aquellos países (countries) cuyos nombres contienen la letra E.
+
+val letraE =(x:String) =>  x.contains("E")==true || x.contains("e") == true
+countries.filter(letraE)
+
+**Elabore una función lambda que filter aquellos países (countries) cuyos nombres inician con la letra E o contienen la letra I.
+
+val ambasLetras =(x:String) =>  x.contains("E")==true ||x.contains("I") ==true
+
+**Elabore una función lambada que filter aquellos países (countries) cuyos nombres tengan una longitud mayor que 5.
+
+
+val longitud(x:String) => x.length >5
+
+countries.filter(longitud)
+
+
+
+
+**Cree una función lambda que filter aquellos númneros que no son abundantes.
+
+val numbers = List(10, 11, 12, 18, 20, 50, 60, 80, 81, 96)
+
+val abundantes = ((x: Int) => (1 until x).toList.filter(x % _ == 0).sum > x)
+
+numbers.filterNot(abundantes)
+
+List[Int] = List(10, 11, 50, 81)
+
+Por: David Alvarez
